@@ -39,6 +39,9 @@
         nav ul li a:hover {
             background-color: #111;
         }
+        nav ul li.active a {
+            background-color: #4CAF50; /* Highlight active page */
+        }
         main {
             padding: 20px;
         }
@@ -59,7 +62,7 @@
     </header>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li> <!-- Home link -->
+            <li class="active"><a href="index.html">Home</a></li> <!-- Marked as active -->
             <li><a href="homepage.html">Our Story</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="events.html">Events</a></li>
@@ -69,8 +72,8 @@
         </ul>
     </nav>
     <main>
-        <h2>About Us</h2>
-        <p>Welcome to our coffee shop! Explore our story, menu, events, and more through the links above.</p>
+        <h2>Welcome to Our Coffee Shop</h2>
+        <p>Explore our story, menu, events, and more through the links above.</p>
     </main>
     <footer>
         <p>&copy; 2024 Our Coffee Shop. All rights reserved.</p>
