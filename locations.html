@@ -39,6 +39,9 @@
         nav ul li a:hover {
             background-color: #111;
         }
+        nav ul li.active a {
+            background-color: #4CAF50; /* Highlight the active page */
+        }
         main {
             padding: 20px;
         }
@@ -67,12 +70,13 @@
     </header>
     <nav>
         <ul>
+            <li><a href="index.html">Home</a></li>
             <li><a href="homepage.html">Our Story</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="events.html">Events</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="suppliers.html">Suppliers</a></li>
-            <li><a href="locations.html">Locations</a></li>
+            <li class="active"><a href="locations.html">Locations</a></li> <!-- Marked as active -->
         </ul>
     </nav>
     <main>
