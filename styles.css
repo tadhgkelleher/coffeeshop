@@ -1,24 +1,37 @@
-/* Base styles */
+/* General body styling */
 body {
-    background-color: #f7f7f7; /* Light coffee beige background */
-    font-family: Arial, sans-serif;
+    background-color: #f3f1e8; /* Light cream color */
+    font-family: 'Arial', sans-serif;
+    color: #3e2723; /* Dark coffee brown text color */
     margin: 0;
     padding: 0;
 }
 
-/* Header custom style */
+/* Header styling */
 header {
-    background-color: #6f4f1f; /* Deep coffee brown */
+    background-color: #3e2723; /* Dark coffee brown */
     color: white;
     padding: 20px;
     text-align: center;
 }
 
-/* Navigation styles */
-nav {
-    background-color: #3e2723; /* Dark brown for navigation */
+/* Footer styling */
+footer {
+    background-color: #3e2723; /* Dark coffee brown */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
+/* Navbar styling */
+nav {
+    background-color: #6d4c41; /* Medium brown for navbar */
+}
+
+/* Navbar list and links */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -36,137 +49,98 @@ nav ul li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-weight: bold;
 }
 
+/* Hover effect for navbar links */
 nav ul li a:hover {
-    background-color: #5d4037; /* Lighter brown hover effect */
+    background-color: #4e342e; /* Darker brown for hover effect */
 }
 
+/* Active link style */
 nav ul li.active a {
-    background-color: #6f4f1f; /* Highlight active page with coffee brown */
+    background-color: #3e2723; /* Dark coffee brown */
 }
 
 /* Main content styling */
 main {
     padding: 20px;
+    background-color: #fff; /* White background for content */
 }
 
-/* Footer custom style */
-footer {
-    background-color: #6f4f1f; /* Match header color */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+/* Headings */
+h1, h2, h3 {
+    color: #3e2723; /* Dark coffee brown for headings */
 }
 
-/* Specific elements for each page */
-.location {
-    margin-bottom: 20px;
+/* Menu category styling */
+.menu-category {
+    margin-bottom: 30px;
 }
 
-.supplier {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
+.menu-category h3 {
+    color: #6d4c41; /* Coffee green for category titles */
+    border-bottom: 2px solid #6d4c41;
+    padding-bottom: 10px;
 }
 
-.supplier h3 {
-    margin-top: 0;
+.menu-category ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
+.menu-category li {
+    margin: 10px 0;
+    color: #3e2723; /* Dark coffee brown text */
 }
 
-/* Headings styling */
-h2, h3 {
-    color: #3e2723; /* Dark brown for headings */
-}
-
-p {
-    color: #4e342e; /* Slightly lighter brown for text */
-}
-
-/* Active link highlight for navbar */
-.navbar-nav .nav-item.active .nav-link {
-    background-color: #6f4f1f; /* Highlight active page */
-}
-
-/* Card and content area styles */
-.card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-.card h3 {
-    color: #6f4f1f; /* Dark coffee brown for card headings */
-}
-
-.card p {
-    color: #4e342e; /* Light brown for card text */
-}
-
-/* Form styles */
-input, textarea, select {
-    border: 1px solid #ddd;
-    padding: 10px;
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    background-color: #6f4f1f; /* Coffee brown for submit button */
-    color: white;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #5d4037; /* Lighter brown on hover */
-}
-
-label {
-    color: #3e2723; /* Dark brown for labels */
-}
-
-/* Optional: Adjustments for specific content areas */
-h2, h3 {
-    color: #3e2723; /* Dark brown for headings */
-}
-
-p {
-    color: #4e342e; /* Slightly lighter brown for text */
-}
-
-/* Additional adjustments for the footer and content alignment */
-footer p {
-    font-size: 0.9em;
-    margin: 0;
-}
-
-footer {
-    font-size: 1.1em;
-    padding: 15px 10px;
-}
-
-/* Button and link styling */
+/* Links within content */
 a {
-    color: #6f4f1f; /* Coffee brown for links */
+    color: #6d4c41; /* Coffee green for links */
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: #3e2723; /* Darker brown when hovering */
+    color: #3e2723; /* Dark brown for hover effect */
+}
+
+/* Buttons styling */
+button {
+    background-color: #6d4c41; /* Coffee green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #4e342e; /* Darker brown for button hover */
+}
+
+/* Form inputs and textareas */
+input, textarea {
+    background-color: #fff; /* White background */
+    color: #3e2723; /* Dark brown text */
+    border: 1px solid #6d4c41; /* Coffee green border */
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #6d4c41;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #4e342e;
+}
+
+/* Form labels */
+label {
+    font-weight: bold;
+    color: #3e2723; /* Dark brown for labels */
 }
