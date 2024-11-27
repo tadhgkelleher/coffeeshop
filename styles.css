@@ -9,7 +9,7 @@ body {
 
 /* Header styling */
 header {
-    background-color: #3e2723; /* Dark coffee brown */
+    background-color: #3e2723 !important; /* Dark coffee brown */
     color: white;
     padding: 20px;
     text-align: center;
@@ -17,7 +17,7 @@ header {
 
 /* Footer styling */
 footer {
-    background-color: #3e2723; /* Dark coffee brown */
+    background-color: #3e2723 !important; /* Dark coffee brown */
     color: white;
     padding: 10px;
     text-align: center;
@@ -26,19 +26,9 @@ footer {
     width: 100%;
 }
 
-/* Override Bootstrap styles if necessary */
-footer.bg-success {
-    background-color: #3e2723 !important; /* Force dark coffee brown for footer */
-}
-
-/* Ensuring the header is not green due to Bootstrap */
-header.bg-success {
-    background-color: #3e2723 !important; /* Force dark coffee brown for header */
-}
-
 /* Navbar styling */
 nav {
-    background-color: #6d4c41; /* Medium brown for navbar */
+    background-color: #6d4c41 !important; /* Medium brown for navbar */
 }
 
 /* Navbar list and links */
@@ -153,4 +143,14 @@ input[type="submit"]:hover {
 label {
     font-weight: bold;
     color: #3e2723; /* Dark brown for labels */
+}
+
+/* Force override of Bootstrap's green background classes */
+.bg-success {
+    background-color: #3e2723 !important; /* Override Bootstrap green background */
+}
+
+/* Ensure that Bootstrap's navbar green is also overridden */
+.navbar.bg-success {
+    background-color: #6d4c41 !important;
 }
