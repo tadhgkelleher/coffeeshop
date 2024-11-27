@@ -4,26 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Our Coffee Shop</title>
-    <link rel="stylesheet" href="styles.css"> <!-- External stylesheet for consistency -->
+    <!-- Bootstrap CSS link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="bg-success text-white text-center py-4">
         <h1>Our Menu</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="homepage.html">Our Story</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="menu.html" class="active">Menu</a></li> <!-- Active page -->
-            <li><a href="suppliers.html">Suppliers</a></li>
-            <li><a href="locations.html">Locations</a></li>
-        </ul>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Our Coffee Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="suppliers.html">Suppliers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <main>
+    
+    <!-- Main Content -->
+    <main class="container mt-4">
         <h2>Explore Our Delicious Offerings</h2>
-        <div class="menu-category">
+        
+        <!-- Coffee Menu Category -->
+        <div class="menu-category mb-4">
             <h3>Coffee</h3>
             <ul>
                 <li><strong>Espresso</strong> - A rich, strong coffee made with finely ground coffee beans.</li>
@@ -33,7 +50,8 @@
             </ul>
         </div>
 
-        <div class="menu-category">
+        <!-- Tea Menu Category -->
+        <div class="menu-category mb-4">
             <h3>Teas</h3>
             <ul>
                 <li><strong>Green Tea</strong> - A fresh and light tea with a smooth flavor.</li>
@@ -43,7 +61,8 @@
             </ul>
         </div>
 
-        <div class="menu-category">
+        <!-- Snacks Menu Category -->
+        <div class="menu-category mb-4">
             <h3>Snacks</h3>
             <ul>
                 <li><strong>Chocolate Croissant</strong> - A flaky pastry filled with rich chocolate.</li>
@@ -53,8 +72,15 @@
             </ul>
         </div>
     </main>
-    <footer>
+    
+    <!-- Footer -->
+    <footer class="bg-success text-white text-center py-3 mt-4">
         <p>&copy; 2024 Our Coffee Shop. All rights reserved.</p>
     </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
