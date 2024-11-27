@@ -4,104 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Locations - Our Coffee Shop</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #333;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        nav ul li {
-            float: left;
-        }
-        nav ul li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav ul li a:hover {
-            background-color: #111;
-        }
-        nav ul li.active a {
-            background-color: #4CAF50; /* Highlight the active page */
-        }
-        main {
-            padding: 20px;
-        }
-        .location {
-            margin-bottom: 20px;
-        }
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        iframe {
-            width: 100%;
-            height: 300px;
-            border: none;
-        }
-    </style>
+    <!-- Bootstrap CSS link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="bg-success text-white text-center py-4">
         <h1>Our Locations</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="homepage.html">Our Story</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="suppliers.html">Suppliers</a></li>
-            <li class="active"><a href="locations.html">Locations</a></li> <!-- Marked as active -->
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Our Coffee Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="suppliers.html">Suppliers</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="locations.html">Locations</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <main>
+    <main class="container mt-4">
         <h2>Find Us at These Locations</h2>
-        <div class="location">
+        <div class="location mb-4">
             <h3>Downtown Coffee Spot</h3>
             <p>123 Main Street, Cityville</p>
         </div>
-        <div class="location">
+        <div class="location mb-4">
             <h3>Riverside Coffee Hub</h3>
             <p>456 River Road, Townsville</p>
         </div>
-        <div class="location">
+        <div class="location mb-4">
             <h3>Hilltop Café</h3>
             <p>789 Mountain Drive, Village</p>
         </div>
+
         <h2>Our Location Map</h2>
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345090933!2d144.95373531568294!3d-37.81627974202133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577df3f2f4baf4e!2sCoffee%20Shop!5e0!3m2!1sen!2s!4v1635803074142!5m2!1sen!2s" 
             allowfullscreen=""
-            loading="lazy">
+            loading="lazy" class="w-100" style="height: 400px;">
         </iframe>
     </main>
-    <footer>
+    <footer class="bg-success text-white text-center py-3 mt-4">
         <p>&copy; 2024 Our Coffee Shop. All rights reserved.</p>
     </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
