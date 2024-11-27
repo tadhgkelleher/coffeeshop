@@ -26,6 +26,16 @@ footer {
     width: 100%;
 }
 
+/* Override Bootstrap styles if necessary */
+footer.bg-success {
+    background-color: #3e2723 !important; /* Force dark coffee brown for footer */
+}
+
+/* Ensuring the header is not green due to Bootstrap */
+header.bg-success {
+    background-color: #3e2723 !important; /* Force dark coffee brown for header */
+}
+
 /* Navbar styling */
 nav {
     background-color: #6d4c41; /* Medium brown for navbar */
