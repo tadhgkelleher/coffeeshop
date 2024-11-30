@@ -154,3 +154,36 @@ label {
 .navbar.bg-success {
     background-color: #6d4c41 !important;
 }
+
+.event-month, .event-year {
+    font-size: xx-large;
+}
+    
+.event-day {
+    font-size: xxx-large;
+}
+    
+.event-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+    
+.inerhit-height {
+    height: inherit;
+}
+
+.event-card-header {
+    background-color: #3e2723;
+    color: white;
+    font-weight: bold;
+}
+
+.event-btn {
+    background-color: #6d4c41;
+}
+
+.event-btn:hover {
+    background-color: #3e2723;
+}
