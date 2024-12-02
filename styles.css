@@ -174,16 +174,29 @@ label {
     height: inherit;
 }
 
-.event-card-header {
+.event-card-header, #add-to-cart-btn, #send-order-btn {
     background-color: #3e2723;
     color: white;
     font-weight: bold;
 }
 
-.event-btn {
+.event-btn, .decrease-btn, .increase-btn {
     background-color: #6d4c41;
 }
 
-.event-btn:hover {
+.event-btn:hover, .decrease-btn:hover, .increase-btn:hover {
     background-color: #3e2723;
+}
+
+.menu-item {
+    position:relative;
+}
+
+.menu-price {
+    position:absolute;
+    right: 0;
+}
+
+.order-category, .order-counter {
+    align-content: center;
 }
