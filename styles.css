@@ -1,34 +1,43 @@
 /* General body styling */
-body {
-    background-color: #f3f1e8; /* Light cream color */
+html, body {
+    background-color: #f5f3ef; /* Soft beige for cleaner look */
     font-family: 'Arial', sans-serif;
-    color: #3e2723; /* Dark coffee brown text color */
+    color: #4b3832; /* Rich mocha text color */
     margin: 0;
     padding: 0;
+    height: 100%; /* Full height for the body and html */
+    display: flex;
+    flex-direction: column; /* Flexbox layout for a sticky footer */
+
 }
 
 /* Header styling */
 header {
-    background-color: #3e2723 !important; /* Dark coffee brown */
-    color: white;
+    background-color: #40342d !important; /* Warm espresso brown */
+    color: #f5f3ef; /* Soft beige text */
     padding: 20px;
     text-align: center;
 }
 
 /* Footer styling */
 footer {
-    background-color: #3e2723 !important; /* Dark coffee brown */
-    color: white;
+    background-color: #40342d !important; /* Warm espresso brown */
+    color: #f5f3ef; /* Soft beige text */
     padding: 10px;
     text-align: center;
-    position: fixed;
+    position: relative; /* Ensure it adapts naturally when content overflows */
     bottom: 0;
     width: 100%;
-}
+    flex-shrink: 0; /* Prevent shrinking */
 
+}
+/* White top middle text */
+header h1 {
+    color: #ffffff; /* Explicit white color for the text */
+}
 /* Navbar styling */
 nav {
-    background-color: #6d4c41 !important; /* Medium brown for navbar */
+    background-color: #6e5c53 !important; /* Medium coffee brown for navbar */
 }
 
 /* Navbar list and links */
@@ -45,7 +54,7 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: white;
+    color: #f5f3ef; /* Soft beige text for links */
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -54,23 +63,24 @@ nav ul li a {
 
 /* Hover effect for navbar links */
 nav ul li a:hover {
-    background-color: #4e342e; /* Darker brown for hover effect */
+    background-color: #4b3832; /* Rich mocha for hover effect */
 }
 
 /* Active link style */
 nav ul li.active a {
-    background-color: #3e2723; /* Dark coffee brown */
+    background-color: #40342d; /* Warm espresso brown for active link */
 }
 
 /* Main content styling */
 main {
+    flex: 1; /* Allows the main content to grow and push footer to the bottom */
     padding: 20px;
     background-color: #fff; /* White background for content */
 }
 
 /* Headings */
 h1, h2, h3 {
-    color: #3e2723; /* Dark coffee brown for headings */
+    color: #4b3832; /* Rich mocha for headings */
 }
 
 /* Menu category styling */
@@ -79,8 +89,8 @@ h1, h2, h3 {
 }
 
 .menu-category h3 {
-    color: #6d4c41; /* Coffee green for category titles */
-    border-bottom: 2px solid #6d4c41;
+    color: #6e5c53; /* Medium coffee brown for category titles */
+    border-bottom: 2px solid #6e5c53;
     padding-bottom: 10px;
 }
 
@@ -91,23 +101,23 @@ h1, h2, h3 {
 
 .menu-category li {
     margin: 10px 0;
-    color: #3e2723; /* Dark coffee brown text */
+    color: #4b3832; /* Rich mocha text */
 }
 
 /* Links within content */
 a {
-    color: #6d4c41; /* Coffee green for links */
+    color: #6e5c53; /* Medium coffee brown for links */
     text-decoration: none;
 }
 
 a:hover {
-    color: #3e2723; /* Dark brown for hover effect */
+    color: #4b3832; /* Rich mocha for hover effect */
 }
 
 /* Buttons styling */
 button {
-    background-color: #6d4c41; /* Coffee green */
-    color: white;
+    background-color: #6e5c53; /* Medium coffee brown */
+    color: #f5f3ef; /* Soft beige text */
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -116,14 +126,14 @@ button {
 }
 
 button:hover {
-    background-color: #4e342e; /* Darker brown for button hover */
+    background-color: #4b3832; /* Rich mocha for button hover */
 }
 
 /* Form inputs and textareas */
 input, textarea {
     background-color: #fff; /* White background */
-    color: #3e2723; /* Dark brown text */
-    border: 1px solid #6d4c41; /* Coffee green border */
+    color: #4b3832; /* Rich mocha text */
+    border: 1px solid #6e5c53; /* Medium coffee brown border */
     padding: 10px;
     border-radius: 5px;
     width: 100%;
@@ -131,28 +141,28 @@ input, textarea {
 }
 
 input[type="submit"] {
-    background-color: #6d4c41;
-    color: white;
+    background-color: #6e5c53;
+    color: #f5f3ef;
 }
 
 input[type="submit"]:hover {
-    background-color: #4e342e;
+    background-color: #4b3832;
 }
 
 /* Form labels */
 label {
     font-weight: bold;
-    color: #3e2723; /* Dark brown for labels */
+    color: #4b3832; /* Rich mocha for labels */
 }
 
 /* Force override of Bootstrap's green background classes */
 .bg-success {
-    background-color: #3e2723 !important; /* Override Bootstrap green background */
+    background-color: #40342d !important; /* Override Bootstrap green background */
 }
 
 /* Ensure that Bootstrap's navbar green is also overridden */
 .navbar.bg-success {
-    background-color: #6d4c41 !important;
+    background-color: #6e5c53 !important;
 }
 
 .event-month, .event-year {
@@ -175,17 +185,17 @@ label {
 }
 
 .event-card-header, #add-to-cart-btn, #send-order-btn {
-    background-color: #3e2723;
+    background-color: #4b3832;
     color: white;
     font-weight: bold;
 }
 
 .event-btn, .decrease-btn, .increase-btn {
-    background-color: #6d4c41;
+    background-color: #6e5c53;
 }
 
 .event-btn:hover, .decrease-btn:hover, .increase-btn:hover {
-    background-color: #3e2723;
+    background-color: #4b3832;
 }
 
 .menu-item {
