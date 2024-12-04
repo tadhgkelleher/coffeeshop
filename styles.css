@@ -172,13 +172,24 @@ label {
 .event-day {
     font-size: xxx-large;
 }
-    
+
 .event-date {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     height: 100%;
 }
+
+@media (max-width: 768px) {
+
+    .event-month, .event-year, .event-day {
+        font-size: xx-large;
+    }
+    
+    .event-date {
+        justify-content: space-evenly;
+    }
+}
+    
+
     
 .inerhit-height {
     height: inherit;
