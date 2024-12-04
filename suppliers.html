@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our trusted suppliers providing high-quality ingredients for our coffee shop.">
     <title>Suppliers - Our Coffee Shop</title>
+    <!-- Favicon link -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS link -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS link -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts (optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="bg-success text-white text-center py-4">
-        <h1>Our Suppliers</h1>
+        <h1 class="display-4">Our Trusted Suppliers</h1>
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -32,27 +37,40 @@
         </div>
     </nav>
     <main class="container mt-4">
-        <h2>Our Trusted Suppliers</h2>
-        <p>We believe in using high-quality, ethically sourced ingredients. Here are some of our trusted partners:</p>
+        <p>At our coffee shop, we are committed to offering our customers only the best ingredients. We carefully select suppliers who share our values of quality, sustainability, and ethical sourcing. Here are the trusted partners who provide us with the essentials for a perfect cup:</p>
 
-        <div class="supplier card mb-4">
-            <div class="card-body">
-                <h3 class="card-title">FairTrade Coffee Co.</h3>
-                <p class="card-text">Based in South America, they provide 100% organic and fair trade certified coffee beans.</p>
+        <div class="row">
+            <!-- Supplier Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://burst.shopifycdn.com/photos/pouring-hot-coffee.jpg?width=1200&format=pjpg&exif=0&iptc=0" class="card-img-top" alt="FairTrade Coffee Co.">
+                    <div class="card-body">
+                        <h5 class="card-title">FairTrade Coffee Co.</h5>
+                        <p class="card-text">FairTrade Coffee Co. is dedicated to sourcing premium, organic coffee beans directly from small-scale farmers in South America. With their fair trade certification, we ensure that every bean supports sustainable farming practices and empowers local communities.</p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="supplier card mb-4">
-            <div class="card-body">
-                <h3 class="card-title">Artisan Milk Producers</h3>
-                <p class="card-text">Local dairy farmers ensuring fresh, high-quality milk for our beverages.</p>
+            <!-- Supplier Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkBIpIUxWKfhB8rR2_BeUM58Sl4GZ1qqbLIA&s" class="card-img-top" alt="Artisan Milk Producers">
+                    <div class="card-body">
+                        <h5 class="card-title">Artisan Milk Producers</h5>
+                        <p class="card-text">Our fresh, creamy milk comes from local, family-owned farms. These passionate artisans use traditional farming methods to produce the highest quality milk, ensuring that every cup of coffee is rich and smooth with every sip.</p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="supplier card mb-4">
-            <div class="card-body">
-                <h3 class="card-title">Green Leaf Tea Partners</h3>
-                <p class="card-text">Our tea leaves come from a cooperative supporting sustainable farming in Asia.</p>
+            <!-- Supplier Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmk9S4mZYcM6MWxa_mJCkHTOF-QAh14T4s5w&s" class="card-img-top" alt="Green Leaf Tea Partners">
+                    <div class="card-body">
+                        <h5 class="card-title">Green Leaf Tea Partners</h5>
+                        <p class="card-text">Our tea leaves come from a dedicated cooperative in Asia that practices sustainable farming methods. By supporting these small-scale farmers, we help preserve the environment while bringing you only the finest loose-leaf teas for a refreshing, natural experience.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -61,7 +79,7 @@
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
