@@ -38,6 +38,8 @@ const order = {
     snacks: []
 }
 
+const EMPTY_CART_HTML = "<h6 class='mt-2'>Your cart is currently empty.</h6>"
+
 function resizePaddingDiv() {
     let footer = $('#footer')
     let paddingDiv = $('#paddingDiv')
@@ -141,15 +143,23 @@ function fillCart() {
     div.removeClass('red-text')
     div[0].innerHTML = "<div class='mt-md-0 mt-5'>"
 
+    let items = 0
+
     for (const key in order) {
         order[key].forEach(item => {
+            items += 1
             total += item.total
             div[0].innerHTML += `<div class="row mt-1">
                 <div class="col-2">${item.quantity} x</div><div class="col-7">${item.product}</div><div class="col-3 text-right">€ ${item.total.toFixed(2)}</div>
             </div>`
         });
     }
-    div[0].innerHTML += `<h4 class="mt-3 text-right">Total € ${total.toFixed(2)}</h4>`
+
+    if (items) {
+        div[0].innerHTML += `<h4 class="mt-3 text-right">Total € ${total.toFixed(2)}</h4>`
+    } else {
+        div[0].innerHTML = EMPTY_CART_HTML
+    }
 
 }
 
@@ -250,6 +260,6 @@ function clearForm(formName) {
     form.reset()
 
     let div = $('#cart')
-    div[0].innerHTML = "<h6>Your cart is currently empty.</h6>"
+    div[0].innerHTML = EMPTY_CART_HTML
 
 }
