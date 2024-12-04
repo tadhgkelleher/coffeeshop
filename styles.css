@@ -40,6 +40,10 @@ nav {
     background-color: #6e5c53 !important; /* Medium coffee brown for navbar */
 }
 
+.nav-link {
+    color: #fff !important
+}
+
 /* Navbar list and links */
 nav ul {
     list-style-type: none;
