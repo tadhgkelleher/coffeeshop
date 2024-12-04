@@ -69,107 +69,109 @@
             </div>
         </div>
 
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <div class="row mt-2">
-                    <div class="col-3 order-category">Coffees</div>
-                    <div class="col-5">
-                        <select class="form-control" id="coffeeSelect">
-                            <option value="-" selected>-</option>
-                            <option value="espresso">Espresso</option>
-                            <option value="doubleEspresso">Double Espresso</option>
-                            <option value="americano">Americano</option>
-                            <option value="cappuccino">Cappuccino</option>
-                            <option value="latte">Latte</option>
-                        </select>
+        <form id="cartForm">
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="row mt-2">
+                        <div class="col-3 order-category">Coffees</div>
+                        <div class="col-5">
+                            <select class="form-control" id="coffeeSelect">
+                                <option value="-" selected>-</option>
+                                <option value="espresso">Espresso</option>
+                                <option value="doubleEspresso">Double Espresso</option>
+                                <option value="americano">Americano</option>
+                                <option value="cappuccino">Cappuccino</option>
+                                <option value="latte">Latte</option>
+                            </select>
+                        </div>
+                        <div class="col-1 btn btn-secondary decrease-btn" onclick="updateCounter('coffee', false)">-</div>
+                        <div class="col-1 order-counter" id="coffeeCounter">-</div>
+                        <div class="col-1 btn btn-secondary increase-btn" onclick="updateCounter('coffee', true)">+</div>
                     </div>
-                    <div class="col-1 btn btn-secondary decrease-btn" onclick="updateCounter('coffee', false)">-</div>
-                    <div class="col-1 order-counter" id="coffeeCounter">-</div>
-                    <div class="col-1 btn btn-secondary increase-btn" onclick="updateCounter('coffee', true)">+</div>
+                    <div class="row mt-2">
+                        <div class="col-3 order-category">Teas</div>
+                        <div class="col-5">
+                            <select class="form-control" id="teaSelect">
+                                <option value="-" selected>-</option>
+                                <option value="breakfastTea">Breakfast Tea</option>
+                                <option value="herbalInfusion">Herbal Infusion</option>
+                                <option value="greenTea">Green Tea</option>
+                                <option value="chaiTea">Chai Tea</option>
+                            </select>
+                        </div>
+                        <div class="col-1 btn btn-secondary decrease-btn" onclick="updateCounter('tea', false)">-</div>
+                        <div class="col-1 order-counter" id="teaCounter">-</div>
+                        <div class="col-1 btn btn-secondary increase-btn" onclick="updateCounter('tea', true)">+</div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-3 order-category">Cold Drinks</div>
+                        <div class="col-5">
+                            <select class="form-control" id="coldDrinkSelect">
+                                <option value="-" selected>-</option>
+                                <option value="water">Water</option>
+                                <option value="icedTea">Iced Tea</option>
+                                <option value="icedCoffee">Iced Coffee</option>
+                                <option value="coke">Coke</option>
+                                <option value="fanta">Fanta</option>
+                                <option value="sprite">Sprite</option>
+                            </select>
+                        </div>
+                        <div class="col-1 btn btn-secondary decrease-btn" onclick="updateCounter('coldDrink', false)">-</div>
+                        <div class="col-1 order-counter" id="coldDrinkCounter">-</div>
+                        <div class="col-1 btn btn-secondary increase-btn" onclick="updateCounter('coldDrink', true)">+</div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-3 order-category">Snacks</div>
+                        <div class="col-5">
+                            <select class="form-control" id="snackSelect">
+                                <option value="-" selected>-</option>
+                                <option value="sandwich">Sandwich</option>
+                                <option value="pastry">Pastry</option>
+                                <option value="cookie">Cookie</option>
+                                <option value="cake">Cake</option>
+                            </select>
+                        </div>
+                        <div class="col-1 btn btn-secondary decrease-btn" onclick="updateCounter('snack', false)">-</div>
+                        <div class="col-1 order-counter" id="snackCounter">-</div>
+                        <div class="col-1 btn btn-secondary increase-btn" onclick="updateCounter('snack', true)">+</div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <div class="btn mt-3" id="add-to-cart-btn" onclick="addItemsToCart()">Add To Cart</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row mt-2">
-                    <div class="col-3 order-category">Teas</div>
-                    <div class="col-5">
-                        <select class="form-control" id="teaSelect">
-                            <option value="-" selected>-</option>
-                            <option value="breakfastTea">Breakfast Tea</option>
-                            <option value="herbalInfusion">Herbal Infusion</option>
-                            <option value="greenTea">Green Tea</option>
-                            <option value="chaiTea">Chai Tea</option>
-                        </select>
+                <div class="col-md-6" id="cart">
+                    <h6>Your cart is currently empty.</h6>
+                </div> <!-- Placeholder for the cart populated by script.js -->
+    
+            </div>
+        </form>
+
+        <form id="orderForm">
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <input class="form-control" type="text" placeholder="First Name" required id="firstName">
+                        </div>
+                        <div class="col-md-6 mt-2 mt-md-0">
+                            <input class="form-control" type="text" placeholder="Last Name" required id="lastName">
+                        </div>
                     </div>
-                    <div class="col-1 btn btn-secondary decrease-btn" onclick="updateCounter('tea', false)">-</div>
-                    <div class="col-1 order-counter" id="teaCounter">-</div>
-                    <div class="col-1 btn btn-secondary increase-btn" onclick="updateCounter('tea', true)">+</div>
+                    <input class="form-control mt-2" type="tel" placeholder="Telephone" required id="phoneNumber">
                 </div>
-                <div class="row mt-2">
-                    <div class="col-3 order-category">Cold Drinks</div>
-                    <div class="col-5">
-                        <select class="form-control" id="coldDrinkSelect">
-                            <option value="-" selected>-</option>
-                            <option value="water">Water</option>
-                            <option value="icedTea">Iced Tea</option>
-                            <option value="icedCoffee">Iced Coffee</option>
-                            <option value="coke">Coke</option>
-                            <option value="fanta">Fanta</option>
-                            <option value="sprite">Sprite</option>
+                <div class="col-md-6">
+                        <select class="form-control mt-2" id="locationSelect" required>
+                            <option value="-" selected>Select shop</option>
+                            <option value="dublin">Dublin</option>
+                            <option value="townsville">Townsville</option>
+                            <option value="village">Village</option>
                         </select>
-                    </div>
-                    <div class="col-1 btn btn-secondary decrease-btn" onclick="updateCounter('coldDrink', false)">-</div>
-                    <div class="col-1 order-counter" id="coldDrinkCounter">-</div>
-                    <div class="col-1 btn btn-secondary increase-btn" onclick="updateCounter('coldDrink', true)">+</div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-3 order-category">Snacks</div>
-                    <div class="col-5">
-                        <select class="form-control" id="snackSelect">
-                            <option value="-" selected>-</option>
-                            <option value="sandwich">Sandwich</option>
-                            <option value="pastry">Pastry</option>
-                            <option value="cookie">Cookie</option>
-                            <option value="cake">Cake</option>
-                        </select>
-                    </div>
-                    <div class="col-1 btn btn-secondary decrease-btn" onclick="updateCounter('snack', false)">-</div>
-                    <div class="col-1 order-counter" id="snackCounter">-</div>
-                    <div class="col-1 btn btn-secondary increase-btn" onclick="updateCounter('snack', true)">+</div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-12">
-                        <div class="btn btn-secondary mt-3" id="add-to-cart-btn" onclick="addItemsToCart()">Add To Cart</div>
-                    </div>
+                        <div class="btn mt-2" id="send-order-btn" onclick="sendEmail()">Send Order</div>
                 </div>
             </div>
-            <div class="col-md-6" id="cart"></div> <!-- Placeholder for the cart populated by script.js -->
-
-        </div>
-
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <div class="row mt-2">
-                    <div class="col-md-6">
-                        <input class="form-control" type="text" placeholder="First Name" required id="firstName">
-                    </div>
-                    <div class="col-md-6 mt-2 mt-md-0">
-                        <input class="form-control" type="text" placeholder="Last Name" required id="lastName">
-                    </div>
-                </div>
-                <input class="form-control mt-2" type="email" placeholder="Email Address" required>
-                <input class="form-control mt-2" type="tel" placeholder="Telephone" required id="phoneNumber">
-            </div>
-            <div class="col-md-6">
-                <label for="locationSelect" class="mt-2">Select Shop</label>
-                <select class="form-control" id="locationSelect" required>
-                    <option value="dublin" selected>Dublin</option>
-                    <option value="galway">Galway</option>
-                    <option value="cork">Cork</option>
-                    <option value="limerick">Limerick</option>
-                    <option value="sligo">Sligo</option>
-                </select>
-
-                <div class="btn btn-secondary mt-2" id="send-order-btn" onclick="sendEmail()">Send Order</div>
-            </div>
-        </div>
+        </form>
 
     </main>
 

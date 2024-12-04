@@ -124,15 +124,12 @@ function addItemsToCart() {
         })
     }
 
+    clearForm('cartForm')
+
     coffeeCounter.textContent = "-"
     teaCounter.textContent = "-"
     coldDrinkCounter.textContent = "-"
     snackCounter.textContent = "-"
-
-    coffeeSelect.value = "-"
-    teaSelect.value = "-"
-    coldDrinkSelect.value = "-"
-    snackSelect.value = "-"
 
     fillCart()
 
@@ -141,6 +138,7 @@ function addItemsToCart() {
 function fillCart() {
     let total = 0
     let div = $('#cart')
+    div.removeClass('red-text')
     div[0].innerHTML = "<div class='mt-md-0 mt-5'>"
 
     for (const key in order) {
@@ -152,10 +150,73 @@ function fillCart() {
         });
     }
     div[0].innerHTML += `<h4 class="mt-3 text-right">Total € ${total.toFixed(2)}</h4>`
+
+}
+
+function validateForm() {
+
+    const PHONE_PATTERN = /^08[3679]\d{7}$/
+    const STRING_PATTERN = /^[A-Za-z\s]+$/
+    const LOCATIONS = ['DUBLIN', 'TOWNSVILLE', 'VILLAGE']
+
+    const firstName = $('#firstName')
+    const lastName = $('#lastName')
+    const phoneNumber = $('#phoneNumber')
+    const locationSelect = $('#locationSelect')
+    const cartDiv = $('#cart')
+
+    firstName.removeClass('red-border')
+    lastName.removeClass('red-border')
+    phoneNumber.removeClass('red-border')
+    locationSelect.removeClass('red-border')
+    cartDiv.removeClass('red-text')
+
+    const firstNameValue = firstName[0].value.trim()
+    const lastNameValue = lastName[0].value.trim()
+    const phoneNumberValue = phoneNumber[0].value.trim()
+    const locationSelectValue = locationSelect[0].value.trim()
+
+    let res = true
+
+    let items = 0
+    for (const key in order) {
+        order[key].forEach(el => items += 1)
+    }
+
+    if (!items) {
+        res = false
+        cartDiv.addClass('red-text')
+    }
+
+    if (!firstNameValue || !STRING_PATTERN.test(firstNameValue)) {
+        res = false
+        firstName.addClass('red-border')
+    }
+
+    if (!lastNameValue || !STRING_PATTERN.test(lastNameValue)) {
+        res = false
+        lastName.addClass('red-border')
+    }
+
+    if (!phoneNumberValue || !PHONE_PATTERN.test(phoneNumberValue.replaceAll(" ", ""))) {
+        res = false
+        phoneNumber.addClass('red-border')
+    }
+
+    
+    if (!LOCATIONS.includes(locationSelectValue.toUpperCase())) {
+        res = false
+        locationSelect.addClass('red-border')
+    }
+
+    return res
 }
 
 
 function sendEmail() {
+
+    if (!validateForm()) return
+
     const recipient = "coffeeshop@test.com"
     const firstName = $('#firstName')[0].value.trim()
     const lastName = $('#lastName')[0].value.trim()
@@ -176,36 +237,19 @@ function sendEmail() {
 
     window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
-    clearForm()
+    clearForm('orderForm')
+
+    order.coffees = []
+    order.teas = []
+    order.coldDrinks = []
+    order.snacks = []
 }
 
-function clearForm() {
-    let coffeeSelect = $('#coffeeSelect')[0]
-    let coffeeCounter = $('#coffeeCounter')[0]
-    let teaSelect = $('#teaSelect')[0]
-    let teaCounter = $('#teaCounter')[0]
-    let coldDrinkSelect = $('#coldDrinkSelect')[0]
-    let coldDrinkCounter = $('#coldDrinkCounter')[0]
-    let snackSelect = $('#snackSelect')[0]
-    let snackCounter = $('#snackCounter')[0]
-
-    coffeeCounter.textContent = "-"
-    teaCounter.textContent = "-"
-    coldDrinkCounter.textContent = "-"
-    snackCounter.textContent = "-"
-
-    coffeeSelect.value = "-"
-    teaSelect.value = "-"
-    coldDrinkSelect.value = "-"
-    snackSelect.value = "-"
+function clearForm(formName) {
+    let form = $(`#${formName}`)[0]
+    form.reset()
 
     let div = $('#cart')
-    div[0].innerHTML = ""
+    div[0].innerHTML = "<h6>Your cart is currently empty.</h6>"
 
-    order = {
-        coffees: [],
-        teas: [],
-        coldDrinks: [],
-        snacks: []
-    }
 }

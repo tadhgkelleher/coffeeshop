@@ -200,3 +200,13 @@ label {
 .order-category, .order-counter {
     align-content: center;
 }
+
+.red-border {
+    border-width: 1px;
+    border-style: solid;  
+    border-color: red;
+}
+
+.red-text {
+    color: red;
+}
