@@ -94,7 +94,7 @@ function addItemsToCart() {
     let snackSelect = $('#snackSelect')[0]
     let snackCounter = $('#snackCounter')[0]
 
-    if (coffeeSelect.value !== "-" && coffeeCounter.textContent !== "-") {
+    if (coffeeSelect.value !== "" && coffeeCounter.textContent !== "-") {
         order.coffees.push({
             product: coffeeSelect.selectedOptions[0].textContent,
             quantity: Number(coffeeCounter.textContent),
@@ -102,7 +102,7 @@ function addItemsToCart() {
         })
     }
 
-    if (teaSelect.value !== "-" && teaCounter.textContent !== "-") {
+    if (teaSelect.value !== "" && teaCounter.textContent !== "-") {
         order.teas.push({
             product: teaSelect.selectedOptions[0].textContent,
             quantity: Number(teaCounter.textContent),
@@ -110,7 +110,7 @@ function addItemsToCart() {
         })
     }
 
-    if (coldDrinkSelect.value !== "-" && coldDrinkCounter.textContent !== "-") {
+    if (coldDrinkSelect.value !== "" && coldDrinkCounter.textContent !== "-") {
         order.coldDrinks.push({
             product: coldDrinkSelect.selectedOptions[0].textContent,
             quantity: Number(coldDrinkCounter.textContent),
@@ -118,7 +118,7 @@ function addItemsToCart() {
         })
     }
 
-    if (snackSelect.value !== "-" && snackCounter.textContent !== "-") {
+    if (snackSelect.value !== "" && snackCounter.textContent !== "-") {
         order.snacks.push({
             product: snackSelect.selectedOptions[0].textContent,
             quantity: Number(snackCounter.textContent),
