@@ -38,7 +38,7 @@ const order = {
     snacks: []
 }
 
-const EMPTY_CART_HTML = "<h5 class='mt-2'>Your cart is currently empty.</h5>"
+const EMPTY_CART_HTML = "<h4 class='mt-2'>Your cart is currently empty.</h4>"
 
 function resizePaddingDiv() {
     let footer = $('#footer')
