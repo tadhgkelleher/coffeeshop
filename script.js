@@ -165,7 +165,7 @@ function fillCart() {
 
 function validateForm() {
 
-    const PHONE_PATTERN = /^08[3679]\d{7}$/
+    const PHONE_PATTERN = /^08[35679]\d{7}$/
     const STRING_PATTERN = /^[A-Za-z\s]+$/
     const LOCATIONS = ['DUBLIN', 'TOWNSVILLE', 'VILLAGE']
 
