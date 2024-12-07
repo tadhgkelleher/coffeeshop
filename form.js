@@ -16,8 +16,6 @@ window.onload = function() {
         var subject = "New Contact Form Submission";
         var body = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
 
-        window.location.href = `mailto:example@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
         alert("Thank you for contacting us, " + name + "! We will get back to you soon.");
 
         form.reset();
