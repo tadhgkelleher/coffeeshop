@@ -10,11 +10,8 @@ window.onload = function() {
 
         if (name === "" || email === "" || message === "") {
             alert("Please fill out all fields before submitting.");
-            return; // Stop here if something is missing
+            return; 
         }
-
-        var subject = "New Contact Form Submission";
-        var body = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
 
         alert("Thank you for contacting us, " + name + "! We will get back to you soon.");
 
